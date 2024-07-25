@@ -1,1 +1,4 @@
 gunicorn
+Flask
+yt-dlp
+
