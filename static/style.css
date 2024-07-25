@@ -20,7 +20,7 @@ body {
 
 /* Card principal */
 .card {
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
     background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
     border-radius: 12px;
@@ -31,38 +31,25 @@ body {
     overflow: hidden;
 }
 
-/* Efeito Neon */
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); /* Efeito neon verde */
-    z-index: -1;
-    animation: neon-flicker 1.5s infinite alternate;
-}
-
-/* Animação do Neon */
-@keyframes neon-flicker {
-    0% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.8;
-    }
-}
-
 /* Título */
 .card h1 {
     color: #e0e0e0;
     margin-bottom: 20px;
     font-size: 1.8rem;
+}
+
+/* Seção Informativa */
+.card .info {
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card .info p {
+    margin: 0;
+    color: #b0b0b0;
+    font-size: 0.9rem;
 }
 
 /* Formulário */
