@@ -20,8 +20,8 @@ Esta é uma aplicação web simples que permite que você baixe vídeos do YouTu
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-   cd NOME_DO_REPOSITORIO
+   git clone https://github.com/Keyllian7/YouTube-Downloader.git
+   cd YouTube-Downloader
    ```
 
 2. **Instale as dependências**:
