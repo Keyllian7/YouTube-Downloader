@@ -12,7 +12,7 @@ def index():
     return render_template('index.html')
 
 # Define a rota para o download de arquivos
-@app.route('/download', methods=['POST'])  # Permite apenas requisições POST
+@app.route('/downloads', methods=['POST'])  # Permite apenas requisições POST
 def download():
     # Obtém a URL e o formato selecionado do formulário enviado
     url = request.form['url']
@@ -62,3 +62,11 @@ if __name__ == '__main__':
     if not os.path.exists('downloads'):
         os.makedirs('downloads')
     app.run(debug=True)  # Inicia o servidor Flask em modo de depuração
+
+import os
+from app import app  # Substitua "app" pelo nome do seu arquivo principal se for diferente
+
+if __name__ == '__main__':
+    if not os.path.exists('downloads'):
+        os.makedirs('downloads')
+    app.run(host='0.0.0.0', port=5000)  # Permite acesso externo
