@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube-Downloader</title>
+    <title>Video Downloader</title>
     <link rel="stylesheet" href="static/style.css">
-    <link rel="icon" href="{{ url_for('static', filename='yt-pixel-art.png') }}" type="image/png">
 </head>
 <body>
     <div class="card">
-        <h1>Faça download de vídeos do YouTube em formato MP3/MP4</h1>
-        <div class="info">
-            <p><strong>Sem Anúncios</strong> - Totalmente livre de interrupções.</p>
-            <p><strong>Fácil e Ágil</strong> - Conversões rápidas com poucos cliques.</p>
-            <p><strong>Segurança Garantida</strong> - Seus dados estão sempre protegidos.</p>
-        </div>
+        <h1>Faça download de vídeos em MP3/MP4</h1>
         <form action="/download" method="post">
-            <label for="url">YouTube URL:</label>
+            <label for="platform">Plataforma:</label>
+            <select id="platform" name="platform" required>
+                <option value="youtube">YouTube</option>
+                <option value="tiktok">TikTok</option>
+            </select>
+
+            <label for="url">URL:</label>
             <input type="text" id="url" name="url" required>
+
             <label for="format">Formato:</label>
             <select id="format" name="format">
                 <option value="mp3">MP3</option>
                 <option value="mp4">MP4</option>
             </select>
+
             <button type="submit">Baixar</button>
         </form>
-        <div class="footer">
-            <p>Desenvolvido por Keyllian Azevedo</p>
-        </div>
     </div>
 </body>
 </html>
